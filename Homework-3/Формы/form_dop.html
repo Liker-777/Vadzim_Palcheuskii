@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Заполните анкету</h1>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" target="_blank">
+        <fieldset>
+            <legend><label for="Snm">Личные данные</label></legend>
+            <input type="text" name="Surname" id="Snm" placeholder="Фамилия" size="25" pattern="[А-Яа-я]{*}" required><br>
+            <input type="text" name="name" placeholder="Имя"  pattern="[А-Яа-я]{*}" size="20" required><br>
+            <input type="text" name="Md" placeholder="Отчество" pattern="[А-Яа-я]{*}" size="24" required>
+        <fieldset>
+            <legend><label for="pt">Паспортные данные</label></legend>
+            <input type="text" id="pt" name="passport[]" pattern="[A-Z]{2}" size="2" placeholder="AA" required> <input type="text" size="7" name="passport[]" pattern="[0-9]{7}" placeholder="1234567" required>
+        </fieldset>
+        <fieldset>
+            <legend><label for="By">Дата рождения</label></legend>
+            <input type="texr" name="yearBy" id="By" pattern="[0-9]{4}"><span> Год</span><br>
+            <select name="monthBy">
+                <option value="1">Январь</option>
+                <option value="2">Февраль</option>
+                <option value="3">Март</option>
+                <option value="4">Апрель</option>
+                <option value="5">Май</option>
+                <option value="6">Июнь</option>
+                <option value="7">Июль</option>
+                <option value="8">Август</option>
+                <option value="9">Сентябрь</option>
+                <option value="10">Октябрь</option>
+                <option value="11">Ноябрь</option>
+                <option value="12">Декабрь</option>
+            </select><br>
+            <input type="number" name="dayBy" min="1" max="31" step="1"><span> День</span>
+        </fieldset>
+        <select name="nationality">
+            <option value="0"></option>
+            <option value="1">РБ</option>
+            <option value="2">РФ</option>
+            <option value="3">KZ</option>
+        </select><span> Национальность</span><br>
+        <span>Адрес:</span><br>
+        <textarea name="" id="" cols="25" rows="3" required></textarea>
+        
+        </fieldset>
+        <fieldset>
+            <legend>Интересы</legend>
+            <fieldset><legend>Хобби</legend>
+                <label for="hobb1"><input type="checkbox" id="hobb1" name="hobby[]" value="1">Рыбалка</label><br>
+                <label for="hobb2"><input type="checkbox" id="hobb2" name="hobby[]" value="2">Астрономия</label><br>
+                <label for="hobb3"><input type="checkbox" id="hobb3" name="hobby[]" value="3">Дайвинг</label><br>
+                <label for="hobb4"><input type="checkbox" id="hobb4" name="hobby[]" value="4">Марки</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Домашнние животные(неск.вар.)</legend>
+                <select name="listAN" size="12" multiple>
+                    <optgroup label="Попугаи">
+                        <option value="11">Волнистый</option>
+                        <option value="12">Ара</option>
+                        <option value="13">Неразлучник</option>
+                    </optgroup>
+                    <optgroup label="Рыба">
+                        <option value="21">Караси</option>
+                        <option value="22">Окуни</option>
+                        <option value="23">Осётр</option>
+                    </optgroup>
+                    <optgroup label="Птицы">
+                        <option value="31">Стая ворон</option>
+                        <option value="32">Аист</option>
+                        <option value="33">Археоптерикс</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Данные для входа и восстановления пароля</legend>
+            <input type="text" name="savelog[]" size="20" pattern="[A-Za-z]{5,*}" placeholder="Логин" required><br>
+            <input type="password" name="savelog[]" size="20" pattern="[A-Za-z]{10,*}" placeholder="Пароль" autocomplete="off">
+        </fieldset>
+        <fieldset>
+            <legend>Координаты:</legend>
+            <input type="email" name="cont[]" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}" placeholder="введите адрес почты"><br>
+            <input type="url" name="cont[]" placeholder="введите адрес сайта" pattern="(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?\/[a-zA-Z0-9]{2,}|((https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)|(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})? ">
+        </fieldset>
+        <fieldset>
+            <legend>Цифры</legend>
+            <input type="number" name="dig[]" min="-2.5" max="2.5" step="0.1"><br>
+            <input type="range" name="dig[]" min="1" max="10">
+        </fieldset>
+        <fieldset>
+            <legend id="lin">Кнопки управления</legend>
+            <input  type="submit"> <input type="reset"><br>
+            <a href="#lin"><img src="data:image/jpeg;base64,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"" alt=""></a>
+        </fieldset>
+    </form>
+</body>
+</html>
