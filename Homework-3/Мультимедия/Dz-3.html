@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Программа на Python — часть 3</title>
+  </head>
+  <body>
+    <h1><img
+      src="https://bytepix.ru/ib/MzPHW88Bh5.png"
+      alt="Картинка значка Python"
+      title="Знак Python"
+      align="right"
+    />HOW-TO: Программа на Python, Часть 3</h1>
+    <ul>
+      <li>
+        <em><a href="Dz-1.html">Программа на Python — часть 1</a></em>
+      </li>
+      <li>
+        <em><a href="Dz-2.html">Программа на Python — часть 2</a></em>
+      </li>
+      <li>
+        <em><a href="Dz-3.html">Программа на Python — часть 3</a></em>
+      </li>
+    </ul>
+    <h2>Содержание</h2>
+    <h3>HOW-TO: Программа на Python, Часть 3</h3>
+    <ul>
+      <li><a href="#mod3">Модули</a></li>
+      <li><a href="#fun3">Функции</a></li>
+    </ul>
+    <hr />
+    <p>
+      В прошлый раз мы изучали списки, подстановку переменных, комментарии,
+      сравнение и присвоение,<br> операторы <strong>if</strong> и
+      <strong>while</strong>. Я обещал, что в этой части мы изучим модули и
+      функции. Давайте начнём
+    </p>
+    <h2 id="mod3">Модули</h2>
+    <a href="#">К содержанию</a>
+    <p>
+      Модули предлагают способ расширить программирование на Python. Вы можете
+      создать свои<br> модули, использовать те, которые поставляются с Python или
+      которые написали другие. В самом<br> Python есть сотни модулей, которые
+      облегчают написание программ. Список модулей, поставляемых<br> с Python,
+      находится по адресу:
+      <a href="http://docs.python.org/modindex.html">
+        http://docs.python.org/modindex.html</a
+      >. Некоторые модули<br> предназначены для определённых операционных систем, но
+      большинство из них<br> кроссплатформенные и работают одинаково на
+      <a href=https://linuxmint.com/>Linux</a>, <a href=https://www.apple.com/mac/>Mac</a> и <a href=https://ms-windows.com/?utm_source=yandex&utm_medium=cpc&utm_campaign=office_no-Russia-78923097&utm_content=15069483450&utm_term=%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%81%D0%BE%D1%84%D1%82&calltouch_tm=yd_c:78923097_gb:5043485242_ad:15069483450_ph:44782804169_st:search_pt:premium_p:1_s:none_dt:desktop_reg:157_ret:44782804169_apt:none&yclid=17790747467100192767>Microsoft Windows</a>. Для
+      использования<br> внешнего модуля необходимо импортировать его в программу.
+      Один из модулей, поставляемых с<br> Python, называется «random». Он даёт
+      возможность генерировать псевдослучайные числа. Мы<br> используем этот модуль
+      в нашем первом примере.
+    </p>
+    <code>
+      #=======================================<br />
+      # random_example.py <br />
+      # Module example using the random module <br />
+      #======================================= <br />
+      import random <br />
+      # print 14 random integers <br />
+      for cntr in range(1,15): <br />
+      &emsp;&emsp;&emsp;&emsp;print random.randint(1,10)
+    </code>
+    <p>
+      Давайте разберём код по строкам. Первые четыре строки — это комментарии, о
+      которых мы<br> говорили в прошлый раз. Пятая строка говорит Python, что нужно
+      использовать модуль «random».<br> Мы должны явно указать Python на это.
+    </p>
+    <hr />
+    <h2 id="fun3">Функции</h2>
+    <a href="#">К содержанию</a>
+    <p>
+      Когда мы импортировали модуль random, мы использовали функцию
+      <strong>randint()</strong>. Функция — это блок<br> кода, который создан для
+      того, чтобы вызывать его в программе, обычно, более одного раза. Это<br>
+      упрощает работу над программой и предотвращает набор одного и того же кода
+      снова и снова. Грубо<br> говоря, если вам нужно написать некоторый код больше,
+      чем 1-2 раза, стоит сделать его функцией.<br> Хотя следующие два примера очень
+      простые, это хорошие примеры функций. Теперь мы хотим,<br> скажем, взять два
+      числа, сложить их, перемножить, вычесть одно из другого, затем вывести на
+      экран<br> эти числа и результаты одновременно. Допустим, нам нужно сделать это
+      три раза для трёх наборов<br> чисел. Тогда наш пример будет выглядеть как код
+      ниже.
+    </p>
+    <code>
+      #silly example <br />
+      print '%d + %d = %d ' % (1,2,1+2)<br />
+      print '%d * %d = %d ' % (1,2,1*2)<br />
+      print '%d - %d = %d ' % (1,2,1-2)<br />
+      <br />
+      print '\n'<br />
+      print '%d + %d = %d ' % (1,4,1+4)<br />
+      print '%d * %d = %d ' % (1,4,1*4)<br />
+      print '%d - %d = %d ' % (1,4,1-4)<br />
+      <br />
+      print '\n'<br />
+      print '%d + %d = %d ' % (10,5,10+5)<br />
+      print '%d * %d = %d ' % (10,5,10*5)<br />
+      print '%d - %d = %d ' % (10,5,10-5)<br />
+      print '\n'<br />
+    </code>
+    <p>
+      Здесь нужно не только набрать много текста, но и непременно возникнут
+      ошибки как при написании,<br> так и при внесении изменений. Вместо этого мы
+      создадим функцию, которую назовём <strong>«DoTwo»</strong>. Она<br> будет
+      каждый раз брать два числа, проводить математические операции и выводить
+      результат.<br> Начнём с ключевого слова <strong>«def»</strong>, которое
+      сигнализирует о том, что мы собираемся определить<br> функцию. После слова
+      <strong>«def»</strong> добавим название функции и список параметров, если
+      таковые<br> имеются, в круглых скобках. Эту строку необходимо завершить
+      двоеточием. Код функции<br> набирается с отступом. Наш улучшенный простой
+      пример (<ins>№2</ins>) показан ниже.
+    </p>
+    <code>
+      #silly example 2...still silly, but better <br />
+      def DoTwo(num1,num2):<br />
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print '%d + %d = %d ' %
+      (num1,num2,num1+num2)<br />
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print '%d * %d = %d ' %
+      (num1,num2,num1*num2)<br />
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print '%d - %d = %d ' %
+      (num1,num2,num1-num2)<br />
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print '\n'<br />
+      DoTwo(1,2)<br />
+      DoTwo(1,4)<br />
+      DoTwo(10,5)
+    </code>
+    <p>
+      Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно
+      будет что-либо<br> поменять в функции, мы сможем сделать это, не создавая
+      проблем для нашей программы. Чтобы<br> вызвать функцию, нужно написать её имя
+      и параметры.
+    </p>
+    <br /><br /><br /><br /><br /><br />
+    <pre>   <a href="Dz-2.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAACXBIWXMAAAsNAAALDQHtB8AsAAAAB3RJTUUH0wkJExMdNO/ZuAAAArVQTFRFAAAAZWVlZWVlZWVlZWVlMmjMMmnRN2W7ZWVlZWVlZWVlZWVlT2KFZWVlMmjMMmnQMmfJZWVlMmnRMmnRNWbAVmJ5OWW2ZWVlOWW3MmjMMmnOMmjLQWOjMmnNMmnROGW4MmjMMmjNN2a+M2bHRmOYOWa5OGW4SWOVQWapRmOZRGWjQmapQ2anPmOpMmjMMmnRMmjLMmnSMmnQMmjKMmbHNGfEMmbHNmbAM2XCMmnSMmfKM2jLMmjMMmnQNGjKMmjLNGfGNGfHMmfJMmbIMmjLMmjKMmnOMmrQMmnOMmjMNGnKMmfLNGnKMmvVMmzXMmrTNGzTQXLNM2zVNWzSPXDPNWvRPXDPNGvTN3PiPnfgPnfhP3fdRnrZRnrcTn7WV4TXSHvaMm/eMm/gNnn1N3r0OHHZOXrxOX78On/9O3/9O4D/PHPYPH/8PIH/PYL/QHXWQIT/QYT9QoT/Q4X9RYf/RoT2Rob8SIj8SIj/SYj8SnrSTYXrTYXsUIv4Uoz1VovvWo/xXY/tXZHyXpLxXpT3Xpf/X5LxYJj/YZDnYZLtYpHpZZv9Zpz/a5fobZjnbZ73cKL8c5nhc5vnc5zodJzodJ3odZ7qdqP3epzbeqXzfKDifabzfqv/gqXmgqbmg6nvhqzviqrli6znjKznja3ojq3lka/okrHtk7PtlLLqmbXqmrXnm7blm7fsnbfnncD/oLvso7vpp77qqsHrrMb2sMXstMnwtsruuMvvuMzuuczvu87wvtDywtP0w9PxxtbxyNfyydfyzNrz0d300t711eD11uH11+H11+L11+L22eP12uT23ur/3+j34Oj34+v45Ov45ez55+355+/+6PD/6e/66/L+7fL87fP97/P67/P78fT78fX78fX98fX+8vX78/f+9vn/+vv++/z+/P3+/v7+////MlzvGAAAAGF0Uk5TAAECAwQFBQYHCw0UFxgaGhwdHyMqKisrMDMzNDU5OTw9PT0+Q01PUVNUW2BiZY+PkpOYmaGhoqqwtrm9v7+/wcrKzNDW2d3d3uXl5ubo7e7u7u/w8PLy9P39/f39/f39/tDAlW4AAAABYktHRObBbFoFAAABkklEQVQYGQXByXISQQCA4b+ne1Z2JhEUSSUaDVGr8gDe9OK7+hYePagHpayYraIMCcOSIQPTzOr3CQDAcmt2lW2SHQAIADjoND2LLIkebwoABeAfDOuv2s/McHqZ9u5uc1BA9/Xp6M2TlkWxXp5/9+R1jgT/5PDj2Z4aB0HTqPX7gcweKwmn7z4cW8XVycj/5RalO1hHy1wyfHs2EkXwYl9Yuijy0hFLvVFmxz0s02jwFFYpQNFzW0q5zSM31b0h1SwooXq43XmNtqp5jZS9YygvAHADhF1Xtq22vZeAfA9AGn0TljQgjkwFAACWLwXCyLJ4fq4BAGD5W8i8VJtkVV7En3yyz3OAPFeRTmXVaHZVMhs40v+7yipDKBnO7mRR8/uuky36dmN0WfM8xyzn07lk7fX3PSePOo5543iOLcPxJJFUWZoeWWb20B1ry1TG1z+LUEvQWjWtuiomiZJGNPk5vd8WEiqtw/W/nm0I4i9XPxb3SYoAMJznrYZjkyXxdhbvchAACFu161KUaaTzXQn8By3KtZMjlOb3AAAAAElFTkSuQmCC" alt="Картинка перехода" title="Переход на другую страницу"></a>                                    <a href="Dz-1.html"><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAEUklEQVR42o2UbUybVRTHO3X6wfjNRLNo/OC38cU8LWNVwDEM2UxwOnUmmqGjaXldpsJEqtkUgaBMGWwqjEFAxA3Gpm6OlxB5cxmsvMg7MiwwttKHtrS09AVKn/6958JoMKPbSf557nOfe373PPeec2TBTEga2Cok9W8TkvrkQmJvhJDYw9StEBJuPBOmbn40iGtQqJKpgIFbheR+vZAyIpLYJpMM3s5UJNd0RqrV6ocfFPi8kDR4Skgdm4/MuCUdyLfhcLkHpy+bUNZghLZ6Ee8W2BGj/VdSpAw5hQRdU5imJYJt8Egw6HMMWi8cmUZ84RzqrrsxftsF26IXl65ZuOyuFUyLHrT0O3C03ISdH42DRT+q1DTFEnyzSOsjM6al3DobBidduGNegsGyvAp0rmDR7aMxzXHdvONGRbMFez676RcSdeM71Y3hDP7Q/8D9xcKRSXxVY8OA3omxGTeJgyx2LyS/n2vBuUJza99dGJl2obTBgvC0fyBoOn9i4CeYtqxBe5Xy1BHboZNGNPctoGvMgRtMBJgxLWHF58ddkyQ/TDZ+NLSO668hO9LLRISmDi6wqPcx8GMylkJbmQpeztBLp67Mo7HHiqYeG3fUz3oC0IBR5OtHRGvrdVaU1hvYhY5LioRrlfvic54i8Dam1tgcC6qa51DbbuYOw1NO+Fh0wWzK6EHR7yLiTnvwev4SlFo7WI73RKmqQgksZ7mpP1Q0jzNXjShvFNE3scgjvZ/Rxq3DXrx9EnjpC0B5zAfGM0Rpat4kcAQlfsqPIr6pNeCPLiuWvRIe1Ja8flR2rIJfPC5BSB6y7tbUfLAOPlgwj7RSI76uNeF8uw1XdQ54lgNR25wSpuYkTIiAxwtuZ1qAzPNAfAkQ/iWDr4GjNefiZVT7VKYx2W7sP+HC/vxVJZd6sOAKgMvauDPX8G1wS60IzEVksedxHzvj7tlX1FXvyaihUO2HaZ2IzpHWFfeDxMAIgFs3B+/KBnYz7ch0QdB09ceoiqNl1KWooYSlzUh78nzYuyZVie++Eaf/7ENMrg/kRyLGDk1b7YH4zO0yMupSitQha2yOGXFFdrzPlF7hwKzVB4db4udb3eHBwUIH18D0Cp/PvuCktdyHfENTBhyRqho1s6c5mFofq/WSXUdHcbjYiPSzIj4pF5FbY0ZerRmZlSJVFs1zZZ0zIe+CGZ9W8HfuQ75ydcdvjBXC9LjsroVq2rbLE7v/fO3YqPR5xQyyqmc36pcN4/V3Wks+ioROXYyq5C0GfXJDI6IXpbo+RJGoa31VO4i0kls4UWfEtxfFe4q+0Rpaq0i4rtur+v4Nxnj2nq2TjkSpbniBdanKiA//Xngne0zSnp3AdxcNKPxVJPExzdE3tsZBv0+REpQ3n82MIqfWR12KGgrVviJJZ4j6uNdKYuNZSim6/bWLCqHf3xBpEPgW2p26FDUUqn0qU6ooSn7KU0opun26qMCZBuw/G0GAr3mHnKsAAAAASUVORK5CYII=" alt="Картинка перехода" title="Переход на главную страницу"></a>                                    <a href="Dz-1.html"><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAEQUlEQVR42pWUa1CUVRjHV8v80PitmRqnpg99ky/Nu4u4BSRSDDqhdrOZGi1gdtkVHCt0yK3RIqACFEGbIITBSAzDMW8gs8pFHYEFFNi45hKQe0HYXXZhWaB9+fc8r+viDtLEmfnNeznn/N7znvM8j+y/mqDtXCVoO9YK2ttyQdMeIWjaiFaFkNTyfJhK/5RKpZItt7FUSeSRuF7Y3WESkrttDH1kkOSNRIFc3RRJ8ieI/yV8SdB2HRNSeu2RacPijhwn9pR6cfzCfZTUWKE7NYkP8lyI0d0VFcnGKSHJUBumrosg+ZPEktIXSVot7B1CQv4oqm5No/9vD5yTc3B7/pFwEUM2L+o63Nhfeh8bPu0Hrb5Hqa6NY/lSK62OTBsSs6qc6Br04N7YDMzjszBZZvBLw5TEXYv0TmLg3jTK9OOI/WJgXtAY+jeoroSTfCXxqLijUNg7iG8qneg0TaF3ZDpAS980LA6fREXjJIx/efx9HnQPeVBcM47w1D4I6qafSbqGWOGXtivlKd3O+KNW6G9PoLnXjRai2Y/J4sXDZneLKNG7cfOPhf4bRhf2ldgQmtI1QaveRuLVMgqhVUTea2km8dhFO660OVDb5gyiqccNj1cMyEcnfCR34VLLg/5qgwPF1WY60H5RkXTz5LaEzGdZvJaoj8scR7l+FJUNY6ioG1/ExWYnZubmg+R55x3I/s2KXce92J4zA6XOBYrxtqjE8lAWyyk2TfEFdvx02Yoj58ZQcnXqsVztlLYkaFtSSmfx6leQUB70gXzmKHXlOyyO4MBP/tGG7DNm3DHNYDlteAx4L/+B+JVDIoTdRscmdeXHAfHOPDtSi62wT/qw3BZfBIR/TXK/OFp9OkHGuc9pGpMxjbdzKXSuLU98vQ/Ykg1EpJP8kI/2uNXyuqr8QxkXFM79MN0UojNFvJElYmvuvB9IvJkDxH4PlN8IluqNwKZMYGMGXYn1BzwUy80dMYmF0TKuUlxQwlJHxNjvfNgcDE2YR2Q68O2FYGnTgIjth32IyfKB5zHsWK9uOLMj4cA6GacfVylFitERlzmGXQUufPQIO/NdOHrJC+/cgtQwMAtN0cIYnsNzQ5M73ZGJlSpqz8m4cemjXC/auL8Hewqt2HfCxpnEV4lfG10BafewF5+XjXJ/YAzP4bly1fXfyRVCPP1QLAtVN6yTa1qvbT3YI35ZNoL0U5YAuVU29JCQ4fv0Cgsj9fFYnqNIajLEJBa9S65niJWBIsQPSlV1iEJjqN+i60Jq0TBJrDh81vZYuI/H8FhF0i3D5sQf3iLHC4vqMj/wlihVNS9TlToZ8cmdifczekXdiT9x5KwZ+edsjHTP77iPxrj593mlfunqJYu9v56u4SrFBYVzX6E1mKM+a3cwdG/hkOLT9x9UCP9+0EqXEDMr+OtcpbigcO5zmnJGcfBznHJI8enzQS0q7tT+BYMkj3kiBFFQAAAAAElFTkSuQmCC" alt="Картинка перехода" title="Переход на другую страницу"></a>
+    </pre>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
