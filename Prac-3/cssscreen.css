@@ -1,0 +1,27 @@
+p {
+    color: rgb(104, 104, 247);
+  }
+#bor {
+  font-family: 'Pacifico', cursive;
+  }
+.bd {
+  color: green;
+  }
+.info {
+  color: red;
+  }
+.Amatic{
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 26px;
+}
+@font-face{
+  font-family: Andika-R;
+  src: url(Andika.eot);
+  src: url(Andika.svg);
+  src: url(Andika.ttf);
+  src: url(Andika.woff);
+  src: url(Andika.woff2);
+}
+#sh{
+  font-family: Andika-R;
+}
