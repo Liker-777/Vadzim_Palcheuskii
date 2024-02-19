@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a-left {
+        display: inline-block;
+        padding-left: 10px;
+      }
+      .a-rght {
+        display: inline-block;
+        padding-right: 18px;
+        padding-left: 5px;
+      }
+      a[href="https://ru.wikipedia.org/wiki/Doc"]:hover
+      {
+        background-image: url("Оформление ссылок файлы/pic/extref.png");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+      a[href="https://ru.wikipedia.org/wiki/pdf"]:hover
+      {
+        background-image: url("Оформление ссылок файлы/pic/extref.png");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+      a[href="https://ru.wikipedia.org/wiki/zip"]:hover
+      {
+        background-image: url("Оформление ссылок файлы/pic/extref.png");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+
+      a[href="files/document.doc"]:hover {
+        background-image: url("Оформление ссылок файлы/pic/logo-doc.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+      a[href="files/document.pdf"]:hover {
+        background-image: url("Оформление ссылок файлы/pic/logo-pdf.png");
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+      a[href="files/document.zip"]:hover {
+        background-image: url("Оформление ссылок файлы/pic/logo-zip.gif");
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+      p {
+        border: solid 1px;
+        margin: 1px;
+        border-radius: 0px 10px;
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      .a-leftli {
+        display: inline-block;
+        padding-left: 15px;
+      }
+      a[href="files/document.doc"]:hover {
+        background-image: url("Оформление ссылок файлы/pic/logo-list.jpg");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+      a[href="files/document.pdf"]:hover {
+        background-image: url("Оформление ссылок файлы/pic/logo-list.jpg");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+      a[href="files/document.zip"]:hover {
+        background-image: url("Оформление ссылок файлы/pic/logo-list.jpg");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Форматы файлов.</h2>
+    <p>
+      .DOC или .doc (от англ.
+      <a class="a-left" href="https://ru.wikipedia.org/wiki/Doc" target="_blank"
+        >document</a
+      >) — расширение имени файла, используемое для файлов, представляющих
+      текст, с разметкой или без.Расширение .DOC часто использовалось для
+      обозначения простых текстовых файлов без форматирования, однако позже
+      стало использоваться для двоичных форматов с разметкой.<br />
+      <a class="a-rght" href="files/document.doc" class="cldoc"
+        >Документ MS Word</a
+      >
+    </p>
+    <p>
+      Portable Document Format (<a
+        class="a-left"
+        href="https://ru.wikipedia.org/wiki/pdf"
+        target="_blank"
+        >PDF</a
+      >) — межплатформенный формат электронных документов, разработанный фирмой
+      Adobe Systems с использованием ряда возможностей языка PostScript.
+      <br />
+      <a class="a-rght" href="files/document.pdf">Документ PDF</a>
+    </p>
+
+    <p>
+      ZIP — популярный формат сжатия данных и архивации файлов. Файл в этом
+      формате обычно имеет расширение
+      <a class="a-left" href="https://ru.wikipedia.org/wiki/zip" target="_blank"
+        >.zip</a
+      >
+      и хранит в сжатом или несжатом виде один или несколько файлов, которые
+      можно из него извлечь путём распаковки с помощью специальной программы.
+      <br />
+      <a class="a-rght" href="files/document.zip">Архив</a>
+    </p>
+    <h1>Это список файлов</h1>
+    <ul>
+      <li>
+        <a class="a-leftli" href="files/document.doc">Документ MS Word</a>
+      </li>
+      <li><a class="a-leftli" href="files/document.pdf">Документ PDF</a></li>
+      <li><a class="a-leftli" href="files/document.zip">Архив</a></li>
+    </ul>
+  </body>
+</html>

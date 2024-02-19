@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        float: left;
+      }
+      span {
+        height: 25px;
+        width: 150px;
+        background-color: rgba(128, 128, 128, 0.438);
+        border-radius: 5px;
+        border: solid 1px;
+        text-align: center;
+        font-size: 20px;
+      }
+      .menu {
+        display: block;
+      }
+      .podmenu {
+        display: none;
+      }
+      div:hover {
+        .podmenu {
+          display: block;
+          clear: both;
+        }
+      }
+      @media all and (max-width: 930px) {
+        div {
+          float: none;
+        }
+        div:hover {
+          .podmenu {
+            display: inline-block;
+          }
+        }
+        .menu {
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span class="menu">Понедельник</span>
+      <span class="podmenu">Завтрак</span> <span class="podmenu">Обед</span>
+      <span class="podmenu">Ужин</span>
+    </div>
+    <div>
+      <span class="menu">Вторник</span>
+      <span class="podmenu">Завтрак</span> <span class="podmenu">Обед</span>
+      <span class="podmenu">Ужин</span>
+    </div>
+    <div>
+      <span class="menu">Среда</span>
+      <span class="podmenu">Завтрак</span> <span class="podmenu">Обед</span>
+      <span class="podmenu">Ужин</span>
+    </div>
+    <div>
+      <span class="menu">Четверг</span>
+      <span class="podmenu">Завтрак</span> <span class="podmenu">Обед</span>
+      <span class="podmenu">Ужин</span>
+    </div>
+    <div>
+      <span class="menu">Пятница</span>
+      <span class="podmenu">Завтрак</span> <span class="podmenu">Обед</span>
+      <span class="podmenu">Ужин</span>
+    </div>
+    <div>
+      <span class="menu">Суббота</span>
+      <span class="podmenu">Завтрак</span> <span class="podmenu">Обед</span>
+      <span class="podmenu">Ужин</span>
+    </div>
+  </body>
+</html>
