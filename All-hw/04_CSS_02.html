@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      .title {
+        background: gray;
+      }
+      td{
+        border: dotted 2px;
+        border-color: gray;
+        border-right-width: 0px;
+        border-top-width: 0px;
+      }
+      td:first-child{
+        font-weight: 700;
+        border-left-width: 0px;
+      }
+      tr:nth-child(odd){
+        background-color: rgba(128, 128, 128, 0.555);
+      }
+      #title {
+        background: gray;
+      }
+      .person1:hover{
+        background: greenyellow;
+      }
+      .person2:hover{
+        background: greenyellow;
+      }
+      .person3:hover{
+        background: greenyellow;
+      }
+      .person4:hover{
+        background: greenyellow;
+      }
+      .person5:hover{
+        background: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr id="title">
+        <th>ФИО</th>
+        <th>пол</th>
+        <th>должность</th>
+        <th>дата рож.</th>
+        <th>Данные 01</th>
+        <th>Данные 02</th>
+      </tr>
+      <tr class="person1">
+        <td>Иванов Иван Иванович</td>
+        <td>М</td>
+        <td>Начальник</td>
+        <td>01.01.1960</td>
+        <td>4567</td>
+        <td>3453</td>
+      </tr>
+      <tr class="person2">
+        <td>Петровна Илонна Петровна</td>
+        <td>Ж</td>
+        <td>Секретарь</td>
+        <td>01.01.1989</td>
+        <td>98795</td>
+        <td>46523</td>
+      </tr>
+      <tr class="person3">
+        <td>Сидоров Илья Игоревич</td>
+        <td>М</td>
+        <td>Бухгалтер</td>
+        <td>01.01.1979</td>
+        <td>743434</td>
+        <td>987979</td>
+      </tr>
+      <tr class="person4">
+        <td>Пупин Фёдор Фёдорович</td>
+        <td>М</td>
+        <td>Водитель</td>
+        <td>01.01.1963</td>
+        <td>74323434</td>
+        <td>9232379</td>
+      </tr>
+      <tr class="person5">
+        <td>Крупин Сергей Иванович</td>
+        <td>М</td>
+        <td>Водитель 2</td>
+        <td>01.01.1983</td>
+        <td>3234534</td>
+        <td>923123379</td>
+      </tr>
+      <tr>
+        <th colspan="6" style="font-weight: 400; background-color: white;">ДАННЫЕ О СОТРУДНИКАХ</th>
+      </tr>
+    </table>
+  </body>
 </html>
