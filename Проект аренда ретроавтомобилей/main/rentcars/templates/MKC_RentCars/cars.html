@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block css_add %}   {% endblock%}
+
+{% block title %} Все автомобили {% endblock%}
+
+
+{% block content %}  
+
+    <h1>Доступные автомобили для аренды</h1>
+    <div class="showcar">
+    {% for car in cars %}
+        {% if car.status %}
+            <h3><a href="{{ car.get_url }}">{{car}}</a></h3>
+            <img src="{{ car.images.url }}">
+            <fieldset>
+               <h4><pre>    Автомобиль - {{car.year}} года
+    Двигатель - {{car.engine}}
+    Трансмисия - {{car.transmission}}
+    Примерная стоимость аренды на неделю - {{car.price_usd}}$</pre></h4>
+    <h3>По поводу точной цены уточняйте у менеджера</h3>
+            </fieldset>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+{% endblock%}

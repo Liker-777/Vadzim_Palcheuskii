@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block css_add %}  {% endblock%}
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <link rel="stylesheet" href="{% static 'css/forms.css'%}">
+    <style>
+    </style>
+    <title>{% block title %}  {% endblock%}</title>
+</head>
+<body>
+    <header>
+    <h1>
+        MKC RentCars
+    </h1>
+    </header>
+    <div class="container">
+        <h1>
+            <a href="/MKC_RentCars/">Главная</a>
+            <a href="/MKC_RentCars/Cars/">Автомобили</a>
+            <a href="/MKC_RentCars/Contacts/">Контакты</a>
+            <a href="/MKC_RentCars/About/">О нас</a>
+            <a href="/MKC_RentCars/Reviews/">Отзывы</a>
+        </h1>
+    </div>
+    <div class="container">
+        <div class="column">
+          
+          {% block content %}
+          {% endblock content %}
+  
+        </div>
+      </div>
+    </body>
+</html>

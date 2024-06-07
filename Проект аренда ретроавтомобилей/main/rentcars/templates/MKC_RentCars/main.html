@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block css_add %}  
+
+{% endblock%}
+
+{% block title %} MKC RentCars {% endblock%}
+
+
+
+{% block content %}  
+<h1>Аренда ретро автомобилей</h1>
+<h2>Если вам нужна помощь при выборе автомобиля можете оставить свой номер телефона и наш менеджер свяжится с вами, либо можете набрать нас по номеру телефона 
+  указаный в кладке Контакты.</h2>
+
+{% if status %}  
+<form action="/MKC_RentCars/" method="post">
+{% csrf_token %}
+          <div>
+          {{ clientform.name.label_tag }} 
+          {{ clientform.name.errors }} 
+          {{ clientform.name }}
+          </div>
+          <div>
+            {{ clientform.codphone.label_tag }} 
+            {{ clientform.codphone.errors }} {{ clientform.phone.errors }} 
+            {{ clientform.codphone }}{{ clientform.phone }}
+            <input type="hidden" name="ClientChoice" value="Нужна помощь в подборе">
+          </div>
+  <button type="submit">Отправить</button>
+</form> 
+{% else %}  
+  <h2>Спасибо, ожидайте звонка нашего менеджера.</h2>
+{% endif%}  
+
+{% endblock%}

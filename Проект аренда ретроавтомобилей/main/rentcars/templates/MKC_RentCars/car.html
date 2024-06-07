@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block css_add %}  
+
+{% endblock%}
+
+{% block title %} {{ car }} {% endblock%}
+
+
+{% block content %}  
+
+    
+    <h1> {{ car }} </h1>
+    <img src="{{ car.images.url }}" alt="" height='500'>
+    {% if car.status %}
+    <fieldset>
+    <h4><pre>    Автомобиль - {{car.year}} года
+    Вин - {{car.vin}}
+    Двигатель - {{car.engine}}
+    Трансмисия - {{car.transmission}}
+    Примерная стоимость аренды на неделю - {{car.price_usd}}$</pre></h4>
+    <h3>По поводу точной цены уточняйте у менеджера</h3>
+     </fieldset>
+    <h3>О автомобиле</h3>
+    <h4>{{car.about_car}}</h4>
+    {% else %}
+        <h1>Автомобиль временно не доступен</h1>    
+    {% endif %}
+
+{% if car.status %}
+    {% if status %}
+      
+    <form action="/MKC_RentCars/Car/{{car.slug}}/" method="post">
+      <h3>Оставьте свой номер если вы хотите взять автомобиль в аренду и наш менеджер свяжется с вами, дибо можете позвонить по номеру <br>+375-ХХ-ХХХ-ХХ-ХХ.</h3>
+    {% csrf_token %}
+          <div>
+            {{ clientform.name.label_tag }} 
+            {{ clientform.name.errors }} 
+            {{ clientform.name }}
+          </div>
+          <div>
+            {{ clientform.codphone.label_tag }} 
+            {{ clientform.codphone.errors }} {{ clientform.phone.errors }} 
+            {{ clientform.codphone }}{{ clientform.phone }}
+            <input type="hidden" name="ClientChoice"  value="{{car}}">
+          </div>
+        <button type="submit">Отправить</button>
+    </form>
+  {% else %}  
+  <h2>Спасибо, ожидайте звонка нашего менеджера.</h2>
+  {% endif%}  
+{% endif%}  
+
+{% endblock%}

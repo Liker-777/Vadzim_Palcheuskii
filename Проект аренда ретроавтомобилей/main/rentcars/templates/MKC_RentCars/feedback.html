@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block css_add %}
+{% endblock%} 
+
+{% block title %} reviews {% endblock%}
+
+{% block content %}
+<form action="/MKC_RentCars/Reviews/" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+            <div>
+            {{ field.label_tag }} 
+            {{ field.errors }} 
+            {{ field }}
+            </div>
+        {% endfor %}
+    <button type="submit">Оставить отзыв</button>
+</form>
+
+
+{% for shf in show_feed reversed %}
+<fieldset>
+    <legend>Отзыв от {{shf}}</legend>
+    <div class="column">
+        <h4><i>{{shf.feedback}}</i></h4>
+    </div>
+    {{shf.time}}
+</fieldset> 
+{% endfor %} 
+{% endblock%}

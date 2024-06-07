@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block css_add %}
+{% endblock%} 
+
+{% block title %} reviews {% endblock%}
+
+{% block content %}
+<h1>Спасибо {{ last_feedback }} за отзыв!</h1>
+
+
+{% for shf in show_feed reversed %}
+<fieldset>
+    <legend>Отзыв от {{shf}}</legend>
+    <div class="column">
+        <h4><i>{{shf.feedback}}</i></h4>
+    </div>
+    {{shf.time}}
+</fieldset> 
+{% endfor %} 
+{% endblock%}
